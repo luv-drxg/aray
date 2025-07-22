@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click to Play Video and Music</title>
+    <style>
+        body {
+            background-color: white;
+            text-align: center;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+        .big-bold-center {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .video-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .instruction {
+            margin-top: 20px;
+            font-size: 20px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="big-bold-center">AYAW MOBA TALAGA?</p>
+    
+    <div class="video-center">
+        <video id="myVideo" width="500" muted>
+            <source src="ssstik.io_@ryza_alcoriza_1750753039085.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p class="instruction">CLICK MO LANG PARA MAG-PLAY ANG VIDEO AT SOUND</p>
+
+    <audio id="myAudio">
+        <source src="ssstik.io_1750753053742.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const video = document.getElementById('myVideo');
+            const audio = document.getElementById('myAudio');
+
+            video.muted = false; // Unmute video
+            video.play();
+            audio.play();
+        }, { once: true });
+    </script>
+
+</body>
+</html>
